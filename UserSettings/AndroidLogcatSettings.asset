@@ -1,48 +1,42 @@
 {
     "m_SelectedDeviceId": "R3CT401ETNE",
     "m_SelectedPackage": {
-        "deviceId": "R3CT401ETNE",
-        "name": "com.TeamOne.BNBKoffieTuinApp",
-        "processId": 32746,
+        "deviceId": "",
+        "name": "",
+        "processId": 0,
         "exited": false
     },
     "m_SelectedPriority": 0,
     "m_KnownPackagesForSerialization": [
         {
             "deviceId": "R3CT401ETNE",
-            "name": "com.TeamOne.BNBKoffieTuinApp",
-            "processId": 24716,
-            "exited": true
-        },
-        {
-            "deviceId": "R3CT401ETNE",
-            "name": "com.snapchat.android",
-            "processId": 11833,
-            "exited": true
-        },
-        {
-            "deviceId": "R3CT401ETNE",
-            "name": "com.TeamOne.BNBKoffieTuinApp",
-            "processId": 14975,
-            "exited": true
-        },
-        {
-            "deviceId": "R3CT401ETNE",
             "name": "com.sec.android.app.launcher",
-            "processId": 2874,
+            "processId": 2236,
             "exited": false
         },
         {
             "deviceId": "R3CT401ETNE",
             "name": "com.TeamOne.BNBKoffieTuinApp",
-            "processId": 21037,
+            "processId": 18389,
             "exited": true
         },
         {
             "deviceId": "R3CT401ETNE",
             "name": "com.TeamOne.BNBKoffieTuinApp",
-            "processId": 32746,
-            "exited": false
+            "processId": 23292,
+            "exited": true
+        },
+        {
+            "deviceId": "R3CT401ETNE",
+            "name": "com.TeamOne.BNBKoffieTuinApp",
+            "processId": 17695,
+            "exited": true
+        },
+        {
+            "deviceId": "R3CT401ETNE",
+            "name": "com.TeamOne.BNBKoffieTuinApp",
+            "processId": 20755,
+            "exited": true
         }
     ],
     "m_Tags": {

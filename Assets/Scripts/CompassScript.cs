@@ -1,80 +1,63 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class CompassScript : MonoBehaviour
-{
-    private const float AVERAGE_TIME_WINDOW = 2.0f;
-    private List<float> headingHistory = new List<float>();
+{ 
+    [Range(0,360)]
+    public float _compassHeading;
+    public float _filterFactor = 0.05f; // Adjust this value to control the amount of filtering
+    public float _calibrationTime = 5.0f; // Adjust this value to control the duration of the calibration routine
     public Text directionText;
+    public string direction = "";
+
+    private bool _calibrating = false;
+    private float _calibrationEndTime;
 
     void Start()
     {
         Input.compass.enabled = true;
         Input.location.Start();
+        _compassHeading = Input.compass.trueHeading;
     }
+
     void Update()
     {
-        // Check if the compass is enabled
         if (Input.compass.enabled)
         {
-            // Get the current heading from the device's compass in degrees
-            float heading = Input.compass.trueHeading;
+            // Get the raw compass heading value
+            float rawHeading = Input.compass.trueHeading;
 
-            // Add the current heading to the history
-            headingHistory.Add(heading);
+            // Apply a low-pass filter to smooth out the heading value
+            _compassHeading = Mathf.LerpAngle(_compassHeading, rawHeading, _filterFactor);
 
-            // Remove any old heading values from the history
-            while (headingHistory.Count > 0 && headingHistory[0] < Time.time - AVERAGE_TIME_WINDOW)
-            {
-                headingHistory.RemoveAt(0);
-            }
-
-            // Calculate the rolling average of the heading over the past 5 seconds
-            float averageHeading = 0.0f;
-            if (headingHistory.Count > 0)
-            {
-                foreach (float h in headingHistory)
-                {
-                    averageHeading += h;
-                }
-                averageHeading /= headingHistory.Count;
-            }
-
-            // Determine the compass direction based on the average heading value
-            string direction = "";
-            if (averageHeading >= 315 || averageHeading < 45)
+            // Determine the compass direction based on the heading value
+            if (_compassHeading >= 315 || _compassHeading < 45)
             {
                 direction = "North";
             }
-            else if (averageHeading >= 45 && averageHeading < 135)
+            else if (_compassHeading >= 45 && _compassHeading < 135)
             {
                 direction = "East";
             }
-            else if (averageHeading >= 135 && averageHeading < 225)
+            else if (_compassHeading >= 135 && _compassHeading < 225)
             {
                 direction = "South";
             }
-            else if (averageHeading >= 225 && averageHeading < 315)
+            else if (_compassHeading >= 225 && _compassHeading < 315)
             {
                 direction = "West";
             }
 
-            // Log the average heading and direction to the console
-            Debug.Log("Average Compass Heading: " + averageHeading.ToString("F2") + " degrees ");
-            
             // Log the heading and direction to the console
-            Debug.Log("Compass Heading: " + heading.ToString("F2") + " degrees ");
-            Debug.Log((direction));
-            
+            Debug.Log("Compass Heading: " + _compassHeading.ToString("F2") + " degrees ");
+            Debug.Log(direction);
+
             // Show the direction text in the UI Text object
             directionText.text = "Direction: " + direction;
-        }
-        else
-        {
-            // Log an error message if the compass is not enabled
-            Debug.LogError("Compass is not enabled on this device");
         }
     }
 }
