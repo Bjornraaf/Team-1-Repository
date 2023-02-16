@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class TargetMovement : MonoBehaviour
 {
+    IEnumerator disableObjectAfterSeconds()
+    {
+        yield return new WaitForSeconds(10);
+        gameObject.SetActive(false);
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -14,5 +19,8 @@ public class TargetMovement : MonoBehaviour
     void Update()
     {
         transform.Translate(Vector3.up * Time.deltaTime * 0.2f);
+
+        StartCoroutine(disableObjectAfterSeconds());
+        
     }
 }
