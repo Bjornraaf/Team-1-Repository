@@ -16,10 +16,8 @@ public class GPSSystem : MonoBehaviour
 
     private void Start()
     {
-        Input.location.Start(1);
+        Input.location.Start( 1f, 1f);
         Input.compass.enabled = true;
-
-        //f_Init = Vector2.zero;
     }
     IEnumerator UpdatePostion()
     {
