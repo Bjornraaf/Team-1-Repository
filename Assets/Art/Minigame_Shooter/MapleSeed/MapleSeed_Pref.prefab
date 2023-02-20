@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 554760579610247574}
   - component: {fileID: -7243450061161478268}
   m_Layer: 0
-  m_Name: MapleSeed
+  m_Name: MapleSeed_Pref
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
