@@ -6,30 +6,27 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class CompassScript : MonoBehaviour
-{ 
-    [Range(0,360)]
+{
     public float _compassHeading;
     public float _filterFactor = 0.05f; // Adjust this value to control the amount of filtering
-    public float _calibrationTime = 5.0f; // Adjust this value to control the duration of the calibration routine
     public Text directionText;
     public string direction = "";
-
-    private bool _calibrating = false;
-    private float _calibrationEndTime;
+    public Image arrowImage;
+    public Transform targetTransform;
+    // Get the raw compass heading value
+    public float rawHeading;
 
     void Start()
     {
         Input.compass.enabled = true;
         Input.location.Start();
-        _compassHeading = Input.compass.trueHeading;
+        rawHeading = Input.compass.trueHeading;
     }
 
     void Update()
     {
         if (Input.compass.enabled)
         {
-            // Get the raw compass heading value
-            float rawHeading = Input.compass.trueHeading;
 
             // Apply a low-pass filter to smooth out the heading value
             _compassHeading = Mathf.LerpAngle(_compassHeading, rawHeading, _filterFactor);
@@ -58,6 +55,12 @@ public class CompassScript : MonoBehaviour
 
             // Show the direction text in the UI Text object
             directionText.text = "Direction: " + direction;
+            
+            // Calculate the rotation angle of the arrow
+            float arrowRotation = 360 - _compassHeading;
+
+            // Set the rotation of the arrow's RectTransform component
+            arrowImage.rectTransform.rotation = Quaternion.Euler(0, 0, arrowRotation);
         }
     }
 }
