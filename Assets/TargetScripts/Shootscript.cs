@@ -1,11 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Drawing;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Shootscript : MonoBehaviour
 {
     public GameObject ARCamera;
     public GameObject particle;
+    public Text scoretext;
+    public int score = 0;
 
     public void shoot()
     {
@@ -17,6 +21,8 @@ public class Shootscript : MonoBehaviour
             {
                 Destroy(hit.transform.gameObject);
                 Instantiate(particle, hit.point, Quaternion.LookRotation(hit.normal));
+                score += 1;
+                scoretext.text = score.ToString() + " Points";
             }
         }
     }
@@ -31,6 +37,5 @@ public class Shootscript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
     }
 }
