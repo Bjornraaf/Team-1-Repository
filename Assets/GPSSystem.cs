@@ -16,7 +16,7 @@ public class GPSSystem : MonoBehaviour
 
     private void Start()
     {
-        Input.location.Start( 2.5f, 2.5f);
+        Input.location.Start( 5, 10);
         Input.compass.enabled = true;
     }
     IEnumerator UpdatePostion()
@@ -58,7 +58,7 @@ public class GPSSystem : MonoBehaviour
         }
         else
         {
-            SetLocation(100 + Time.time, 100 + Time.time);
+            SetLocation(0 + Time.time, 0 + Time.time);
         }
     }
     void SetLocation(float latitude, float longitude)
