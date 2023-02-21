@@ -20,8 +20,7 @@ public class TargetMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(Vector3.up * Time.deltaTime * 0.2f);
-
+        transform.Translate(Vector3.down * Time.deltaTime * 0.2f);
         
     }
 }

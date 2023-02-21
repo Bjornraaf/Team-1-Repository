@@ -17,7 +17,7 @@ public class Shootscript : MonoBehaviour
         
         if (Physics.Raycast(ARCamera.transform.position, ARCamera.transform.forward, out hit))
         {
-            if (hit.transform.name == "Sphere 1(Clone)"    || hit.transform.name == "Sphere 2(Clone)"   || hit.transform.name == "Sphere(Clone)")
+            if (hit.transform.name == "seed(Clone)"    || hit.transform.name == "Sphere 2(Clone)"   || hit.transform.name == "Sphere(Clone)")
             {
                 Destroy(hit.transform.gameObject);
                 Instantiate(particle, hit.point, Quaternion.LookRotation(hit.normal));
