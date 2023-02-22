@@ -7,25 +7,39 @@ public class SpawnTargetScript : MonoBehaviour
 
     public Transform [] spawnPoints;
     public GameObject [] targets;
+    public GameObject Endscreen;
+    public int spawns = 0;
 
     // Start is called before the first frame update
     void Start()
     {
         StartCoroutine(StartSpawning());
+        StartCoroutine(ShowEnd());
     }
 
-    IEnumerator StartSpawning ()
+    public IEnumerator StartSpawning ()
     {
 
-        yield return new WaitForSeconds(4);
+        yield return new WaitForSeconds(3);
 
         for (int i = 0; i < 3;   i++) 
         {
             Instantiate(targets[i], spawnPoints[i].position, Quaternion.identity);
+            spawns += 1;
         }
 
-        StartCoroutine(StartSpawning());
 
+        if (spawns <= 29)
+        {
+            StartCoroutine(StartSpawning());
+        }
+
+    }
+
+    public IEnumerator ShowEnd ()
+    {
+        yield return new WaitForSeconds(40);
+        Endscreen.SetActive(true);
     }
 
 }

@@ -4,11 +4,12 @@ using System.Drawing;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Shootscript : MonoBehaviour
+public class Shootscript : SpawnTargetScript
 {
     public GameObject ARCamera;
     public GameObject particle;
     public Text scoretext;
+    public Text scoretext2;
     public int score = 0;
 
     public void shoot()
@@ -23,6 +24,7 @@ public class Shootscript : MonoBehaviour
                 Instantiate(particle, hit.point, Quaternion.LookRotation(hit.normal));
                 score += 1;
                 scoretext.text = score.ToString() + " Points";
+                scoretext2.text = score.ToString() + " Points";
             }
         }
     }
