@@ -5,10 +5,10 @@ using UnityEngine;
 public class SpawnTargetScript : MonoBehaviour
 {
 
-    public Transform [] spawnPoints;
-    public GameObject [] targets;
-    public GameObject Endscreen;
-    public int spawns = 0;
+    public  Transform [] spawnPoints;
+     public GameObject [] targets;
+    public GameObject endScreen;
+     int spawns = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -17,7 +17,7 @@ public class SpawnTargetScript : MonoBehaviour
         StartCoroutine(ShowEnd());
     }
 
-    public IEnumerator StartSpawning ()
+    IEnumerator StartSpawning () // the entire script that makes the leaves spawn after an interval
     {
 
         yield return new WaitForSeconds(3);
@@ -29,17 +29,17 @@ public class SpawnTargetScript : MonoBehaviour
         }
 
 
-        if (spawns <= 29)
+        if (spawns <= 29) // stops the leaves from spawning
         {
             StartCoroutine(StartSpawning());
         }
 
     }
 
-    public IEnumerator ShowEnd ()
+     IEnumerator ShowEnd () //this shows the end screen after 40 seconds
     {
         yield return new WaitForSeconds(40);
-        Endscreen.SetActive(true);
+        endScreen.SetActive(true);
     }
 
 }

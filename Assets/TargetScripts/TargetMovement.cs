@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TargetMovement : MonoBehaviour
 {
-    IEnumerator disableObjectAfterSeconds()
+    IEnumerator disableObjectAfterSeconds() // removes the targets to save resources
     {
         yield return new WaitForSeconds(10);
         gameObject.SetActive(false);
