@@ -8,7 +8,7 @@ public class SpawnTargetScript : MonoBehaviour
     [SerializeField] private Transform [] SpawnPoints;
     [SerializeField] private GameObject [] Targets;
     [SerializeField] private GameObject EndScreen;
-    [SerializeField] private int Spawns = 0;
+     private int Spawns = 0;
 
     // Start is called before the first frame update.
     void Start()

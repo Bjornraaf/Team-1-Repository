@@ -15,7 +15,7 @@ public class Shootscript : MonoBehaviour
     // So you can see your score at the end.
     [SerializeField] private  Text ScoreText2; 
     // The score asset
-    [SerializeField] private int Score = 0;
+    private int Score = 0;
 
     /// <summary>
     /// This takes care of all the shooting by using the raycast of the camera to see if it hits the object with a specific name and adds a point to the player's score.
