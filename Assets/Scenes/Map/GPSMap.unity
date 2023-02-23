@@ -221,12 +221,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &812351373 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 792621663572972400, guid: 7fc446ef981b64a4d8cb76f016b31e92,
-    type: 3}
-  m_PrefabInstance: {fileID: 792621663846968573}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &853869782
 GameObject:
   m_ObjectHideFlags: 0
@@ -704,14 +698,26 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1764693866}
-  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: -0.7071068, w: 0}
   m_LocalPosition: {x: 0, y: 40, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 90, y: 180, z: 0}
+--- !u!114 &1891320755 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6044597195999085765, guid: 7fc446ef981b64a4d8cb76f016b31e92,
+    type: 3}
+  m_PrefabInstance: {fileID: 792621663846968573}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87ebec4d6443bbf4c84e7193224dc41a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2041651922
 GameObject:
   m_ObjectHideFlags: 0
@@ -822,7 +828,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68586992d28a1a94bb1adc9a5b6008eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scale: 1
+  Scale: 1
   isFakingLocation: 1
 --- !u!136 &2051949381
 CapsuleCollider:
@@ -1134,11 +1140,14 @@ PrefabInstance:
     - target: {fileID: 30601089207557282, guid: 7fc446ef981b64a4d8cb76f016b31e92,
         type: 3}
       propertyPath: m_IsActive
+<<<<<<< HEAD:Assets/Scenes/Map/GPSTest.unity
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1274338548523438963, guid: 7fc446ef981b64a4d8cb76f016b31e92,
         type: 3}
       propertyPath: m_SortingOrder
+=======
+>>>>>>> parent of 7cc3333 (Revert "GPs tracking Done and Waypoints started"):Assets/Scenes/Map/GPSMap.unity
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4921769314691452339, guid: 7fc446ef981b64a4d8cb76f016b31e92,
@@ -1257,14 +1266,9 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8349964759939965008, guid: ff968cc1a5882104999e30c338edbd4f,
         type: 3}
-      propertyPath: crossFade
+      propertyPath: levelloader
       value: 
-      objectReference: {fileID: 812351373}
-    - target: {fileID: 8349964759939965008, guid: ff968cc1a5882104999e30c338edbd4f,
-        type: 3}
-      propertyPath: sceneName
-      value: CrossFadeScene
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1891320755}
     - target: {fileID: 8349964759939965011, guid: ff968cc1a5882104999e30c338edbd4f,
         type: 3}
       propertyPath: m_RootOrder
@@ -1273,7 +1277,7 @@ PrefabInstance:
     - target: {fileID: 8349964759939965011, guid: ff968cc1a5882104999e30c338edbd4f,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5
+      value: -0.9
       objectReference: {fileID: 0}
     - target: {fileID: 8349964759939965011, guid: ff968cc1a5882104999e30c338edbd4f,
         type: 3}
@@ -1283,7 +1287,7 @@ PrefabInstance:
     - target: {fileID: 8349964759939965011, guid: ff968cc1a5882104999e30c338edbd4f,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 5
+      value: -5.9
       objectReference: {fileID: 0}
     - target: {fileID: 8349964759939965011, guid: ff968cc1a5882104999e30c338edbd4f,
         type: 3}

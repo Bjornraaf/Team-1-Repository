@@ -30,9 +30,12 @@ EditorUserSettings:
       value: 51020d5e510d085d0f0a5a2115750c44154f1d732e787f677971486bb4b2363d
       flags: 0
     RecentlyUsedSceneGuid-8:
+<<<<<<< HEAD
       value: 050401045407585955580a271475094413164d7e79717f6229281c6bb4b46c6c
       flags: 0
     RecentlyUsedSceneGuid-9:
+=======
+>>>>>>> parent of 7cc3333 (Revert "GPs tracking Done and Waypoints started")
       value: 0153035606570a0e54585f2049215e44171548737e797664282b4865b1e63660
       flags: 0
     UnityRemoteCompression:
