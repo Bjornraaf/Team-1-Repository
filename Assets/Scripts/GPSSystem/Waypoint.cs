@@ -1,12 +1,14 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-
-public class Waypoint : MonoBehaviour
+public class Waypoint : LevelLoader
 {
-    [SerializeField] private LevelLoader Loader;
-
     private void OnTriggerEnter(Collider other)
     {
-        Loader.LoadNextLevel();
+        LoadNextLevel();
     }
+
 }
