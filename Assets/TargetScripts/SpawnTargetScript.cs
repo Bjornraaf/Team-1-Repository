@@ -10,14 +10,15 @@ public class SpawnTargetScript : MonoBehaviour
     [SerializeField] private GameObject EndScreen;
     [SerializeField] private int Spawns = 0;
 
-    // Start is called before the first frame update
+    // Start is called before the first frame update.
     void Start()
     {
         StartCoroutine(StartSpawning());
         StartCoroutine(ShowEnd());
     }
 
-    IEnumerator StartSpawning () // the entire script that makes the leaves spawn after an interval
+    // the entire script that makes the leaves spawn after an interval.
+    IEnumerator StartSpawning () 
     {
 
         yield return new WaitForSeconds(3);
@@ -28,15 +29,16 @@ public class SpawnTargetScript : MonoBehaviour
             Spawns += 1;
         }
 
-
-        if (Spawns <= 29) // stops the leaves from spawning
+        // Starts and stops the leaves from spawning.
+        if (Spawns <= 29)
         {
             StartCoroutine(StartSpawning());
         }
 
     }
 
-     IEnumerator ShowEnd () //this shows the end screen after 40 seconds
+    //This shows the end screen after 40 seconds.
+    IEnumerator ShowEnd () 
     {
         yield return new WaitForSeconds(40);
         EndScreen.SetActive(true);
