@@ -10,11 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 554760579610247574}
   - component: {fileID: -7243450061161478268}
-  - component: {fileID: -9086327178110339712}
-  - component: {fileID: 6739628102562791828}
-  - component: {fileID: -4032221220147349102}
+  - component: {fileID: -4217210063540875616}
   m_Layer: 0
-  m_Name: Seed
+  m_Name: MapleSeed_Pref
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -57,20 +55,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
---- !u!65 &-9086327178110339712
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 934839292939688748}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.35, y: -0.25, z: 0.15}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &6739628102562791828
+--- !u!114 &-4217210063540875616
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -82,22 +67,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1e8041d1b72938418960e09ed5bb939, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!54 &-4032221220147349102
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 934839292939688748}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1 &2764979517984015989
 GameObject:
   m_ObjectHideFlags: 0

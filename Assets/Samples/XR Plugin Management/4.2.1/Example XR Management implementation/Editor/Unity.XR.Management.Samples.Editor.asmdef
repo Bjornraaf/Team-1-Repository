@@ -1,23 +1,14 @@
 {
     "name": "Unity.XR.Management.Samples.Editor",
-    "rootNamespace": "",
     "references": [
         "Unity.XR.Management.Editor",
         "Unity.XR.Management.Samples",
         "Unity.XR.Management"
     ],
-    "includePlatforms": [
-        "Android",
-        "Editor",
-        "WindowsStandalone32",
-        "WindowsStandalone64"
+    "optionalUnityReferences": [
     ],
-    "excludePlatforms": [],
-    "allowUnsafeCode": false,
-    "overrideReferences": false,
-    "precompiledReferences": [],
-    "autoReferenced": true,
-    "defineConstraints": [],
-    "versionDefines": [],
-    "noEngineReferences": false
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": []
 }
