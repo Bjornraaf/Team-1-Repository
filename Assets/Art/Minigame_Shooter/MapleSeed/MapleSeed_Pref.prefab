@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 554760579610247574}
   - component: {fileID: -7243450061161478268}
+  - component: {fileID: -4217210063540875616}
   m_Layer: 0
   m_Name: MapleSeed_Pref
   m_TagString: Untagged
@@ -54,6 +55,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+--- !u!114 &-4217210063540875616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 934839292939688748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1e8041d1b72938418960e09ed5bb939, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2764979517984015989
 GameObject:
   m_ObjectHideFlags: 0
