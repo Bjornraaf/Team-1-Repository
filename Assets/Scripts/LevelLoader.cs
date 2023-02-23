@@ -1,22 +1,26 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class LevelLoader : MonoBehaviour
 {
-    public string sceneName;
-    public Animator crossFade;
-    public float transtionTime = 1f;
+    [Header("Animator")]
+    [SerializeField] private Animator Transition;
+    [Header("Variables")]
+    [SerializeField] private float TransitionTime = 1f;
+    [SerializeField] private string SceneName;
 
+    /// <summary>
+    /// Starts the Scene Transition and Loads the next Scene;
+    /// </summary>
     public void LoadNextLevel()
     {
-        StartCoroutine(LoadLevel(sceneName));
+        StartCoroutine(LoadLevel(SceneName));
     }
     IEnumerator LoadLevel(string name)
     {
-        crossFade.SetTrigger("Start");
-        yield return new WaitForSeconds(transtionTime);
+        Transition.SetTrigger("Start");
+        yield return new WaitForSeconds(TransitionTime);
         SceneManager.LoadScene(name);
 
     }

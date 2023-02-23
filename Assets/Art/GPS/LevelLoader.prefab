@@ -60,7 +60,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!114 &6138268509311658540
 MonoBehaviour:
@@ -114,9 +114,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87ebec4d6443bbf4c84e7193224dc41a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: CrossFadeScene
-  crossFade: {fileID: 792621663572972400}
-  transtionTime: 1
+  Transition: {fileID: 792621663572972400}
+  TransitionTime: 1
+  SceneName: CrossFadeScene
 --- !u!1 &792621663369216061
 GameObject:
   m_ObjectHideFlags: 0
