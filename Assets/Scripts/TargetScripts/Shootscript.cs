@@ -27,7 +27,7 @@ public class Shootscript : MonoBehaviour
         //Checks if the raycast hits the object.
         if (Physics.Raycast(ARCamera.transform.position, ARCamera.transform.forward, out hit))
         {
-            if (hit.transform.name == "seed(Clone)"    || hit.transform.name == "object 2(Clone)"   || hit.transform.name == "object 3(Clone)")
+            if (hit.transform.name == "seed(Clone)"    || hit.transform.name == "Seed(Clone)"   || hit.transform.name == "object 3(Clone)")
             {
                 //Destroys the object.
                 Destroy(hit.transform.gameObject); 
