@@ -1,31 +1,13 @@
 {
-    "m_SelectedDeviceId": "R3CT401ETNE",
+    "m_SelectedDeviceId": "adb-R3CT401ETNE-Lr5G84._adb-tls-connect._tcp.",
     "m_SelectedPackage": {
-        "deviceId": "R3CT401ETNE",
+        "deviceId": "adb-R3CT401ETNE-Lr5G84._adb-tls-connect._tcp.",
         "name": "com.TeamOne.BNBKoffieTuinApp",
-        "processId": 32326,
+        "processId": 27665,
         "exited": false
     },
     "m_SelectedPriority": 0,
     "m_KnownPackagesForSerialization": [
-        {
-            "deviceId": "R3CT401ETNE",
-            "name": "com.sec.android.app.launcher",
-            "processId": 3245,
-            "exited": false
-        },
-        {
-            "deviceId": "R3CT401ETNE",
-            "name": "com.TeamOne.BNBKoffieTuinApp",
-            "processId": 11511,
-            "exited": true
-        },
-        {
-            "deviceId": "R3CT401ETNE",
-            "name": "com.TeamOne.BNBKoffieTuinApp",
-            "processId": 27545,
-            "exited": true
-        },
         {
             "deviceId": "R3CT401ETNE",
             "name": "com.TeamOne.BNBKoffieTuinApp",
@@ -42,6 +24,36 @@
             "deviceId": "R3CT401ETNE",
             "name": "com.TeamOne.BNBKoffieTuinApp",
             "processId": 32326,
+            "exited": true
+        },
+        {
+            "deviceId": "R3CT401ETNE",
+            "name": "com.TeamOne.BNBKoffieTuinApp",
+            "processId": 15978,
+            "exited": true
+        },
+        {
+            "deviceId": "R3CT401ETNE",
+            "name": "com.TeamOne.BNBKoffieTuinApp",
+            "processId": 18372,
+            "exited": false
+        },
+        {
+            "deviceId": "R3CT401ETNE",
+            "name": "com.TeamOne.BNBKoffieTuinApp",
+            "processId": 27497,
+            "exited": false
+        },
+        {
+            "deviceId": "R3CT401ETNE",
+            "name": "com.TeamOne.BNBKoffieTuinApp",
+            "processId": 32465,
+            "exited": false
+        },
+        {
+            "deviceId": "R3CT401ETNE",
+            "name": "com.TeamOne.BNBKoffieTuinApp",
+            "processId": 5264,
             "exited": false
         },
         {
@@ -54,6 +66,18 @@
             "deviceId": "255450a9",
             "name": "com.TeamOne.BNBKoffieTuinApp",
             "processId": 19824,
+            "exited": false
+        },
+        {
+            "deviceId": "adb-R3CT401ETNE-Lr5G84._adb-tls-connect._tcp.",
+            "name": "com.TeamOne.BNBKoffieTuinApp",
+            "processId": 26287,
+            "exited": false
+        },
+        {
+            "deviceId": "adb-R3CT401ETNE-Lr5G84._adb-tls-connect._tcp.",
+            "name": "com.TeamOne.BNBKoffieTuinApp",
+            "processId": 27665,
             "exited": false
         }
     ],
