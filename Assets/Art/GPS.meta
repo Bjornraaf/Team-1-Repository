@@ -1,0 +1,12 @@
+fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Scenes/ShootingGame.unity.meta
+guid: 9d29ebbc8e3906f4ab5a93cd46c85f3b
+========
+guid: 10487a85d27853f4db186cd77d393f30
+folderAsset: yes
+>>>>>>>> parent of 7cc3333 (Revert "GPs tracking Done and Waypoints started"):Assets/Art/GPS.meta
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
