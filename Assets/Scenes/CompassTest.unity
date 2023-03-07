@@ -170,9 +170,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbe1443ca23401546bc47663fe46cac5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetCheckpoint: {fileID: 643969389}
-  compassUI: {fileID: 1233592642}
-  maxAngleDifference: 5
   compassHeading: 0
   filterFactor: 0.05
   directionText: {fileID: 272691821}
@@ -911,7 +908,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1233592641
 RectTransform:
   m_ObjectHideFlags: 0

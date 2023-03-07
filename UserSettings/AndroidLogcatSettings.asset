@@ -3,7 +3,7 @@
     "m_SelectedPackage": {
         "deviceId": "adb-R3CT401ETNE-Lr5G84._adb-tls-connect._tcp.",
         "name": "com.TeamOne.BNBKoffieTuinApp",
-        "processId": 27665,
+        "processId": 32578,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -78,6 +78,18 @@
             "deviceId": "adb-R3CT401ETNE-Lr5G84._adb-tls-connect._tcp.",
             "name": "com.TeamOne.BNBKoffieTuinApp",
             "processId": 27665,
+            "exited": false
+        },
+        {
+            "deviceId": "adb-R3CT401ETNE-Lr5G84._adb-tls-connect._tcp.",
+            "name": "com.TeamOne.BNBKoffieTuinApp",
+            "processId": 31485,
+            "exited": false
+        },
+        {
+            "deviceId": "adb-R3CT401ETNE-Lr5G84._adb-tls-connect._tcp.",
+            "name": "com.TeamOne.BNBKoffieTuinApp",
+            "processId": 32578,
             "exited": false
         }
     ],

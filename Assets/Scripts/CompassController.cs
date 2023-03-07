@@ -20,12 +20,6 @@ using UnityEngine.UI;
 /// 
 public class CompassController : MonoBehaviour
 {
-    [Tooltip("The target the UI element should point towards")]
-    public Transform targetCheckpoint;
-    [Tooltip("The UI element that is the compass")]
-    public Image compassUI;
-    [Tooltip("The maximum angle difference between the compass and the target direction")]
-    public float maxAngleDifference = 5.0f;
     [Tooltip("The smoothed compass heading")]
     public float compassHeading;
     [Tooltip("The amount of noise filtering for the smoothed compass")]
@@ -50,10 +44,6 @@ public class CompassController : MonoBehaviour
         // If the compass is on, continue running script.
         if (Input.compass.enabled)
         {
-            // Get the direction to the target checkpoint.
-            Vector3 targetDirection = targetCheckpoint.position - transform.position;
-            targetDirection.y = 0;
-
             // Apply a low-pass filter to smooth out the heading value.
             compassHeading = Mathf.LerpAngle(compassHeading, rawHeading, filterFactor);
             compassHeading = (compassHeading + 360f) % 360f;
@@ -76,21 +66,13 @@ public class CompassController : MonoBehaviour
                 directionString = "W";
             }
 
-            // Get the angle difference between the compass heading and the target direction.
-            float angleDifference = Vector3.SignedAngle(transform.forward, targetDirection, Vector3.up);
-
-            // Wrap the angle difference to the -180 to 180 range.
-            angleDifference = (angleDifference + 180f) % 360f - 180f;
-
             // Snap the compass heading to 0 or 360 when necessary.
             if (compassHeading <= 0.1f || compassHeading >= 359.9f)
             {
                 compassHeading = 0f;
             }
-
+            
             // Update the UI element to display the compass.
-            compassUI.transform.rotation = Quaternion.Euler(0, 0, -compassHeading);
-            compassUI.transform.GetChild(0).rotation = Quaternion.Euler(0, 0, angleDifference);
             directionText.text = "Direction: " + directionString;
 
             // Log the heading and direction to the console.
