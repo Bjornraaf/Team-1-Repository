@@ -6,16 +6,16 @@ public class LevelLoader : MonoBehaviour
 {
     [Header("Animator")]
     [SerializeField] private Animator Transition;
-    [Header("Variables")]
+    [Header("Time")]
     [SerializeField] private float TransitionTime = 1f;
-    [SerializeField] private string SceneName;
+    public string LoadSceneWithName;
 
     /// <summary>
     /// Starts the Scene Transition and Loads the next Scene;
     /// </summary>
     public void LoadNextLevel()
     {
-        StartCoroutine(LoadLevel(SceneName));
+        StartCoroutine(LoadLevel(LoadSceneWithName));
     }
     IEnumerator LoadLevel(string name)
     {

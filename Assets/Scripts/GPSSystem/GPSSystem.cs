@@ -60,7 +60,7 @@ public class GPSSystem : MonoBehaviour
         }
         else
         {
-            SetLocation(0 + Time.time, 0 + Time.time);
+            SetLocation(0 + -Time.time, 0 + -Time.time);
         }
     }
 
