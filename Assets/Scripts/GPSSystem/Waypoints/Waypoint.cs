@@ -12,7 +12,7 @@ public class Waypoint : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        Loader.LoadSceneWithName = NewSceneName;
+        Loader.loadSceneWithName = NewSceneName;
         Loader.LoadNextLevel();
     }
 }
