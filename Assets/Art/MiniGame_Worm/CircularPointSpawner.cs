@@ -1,8 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine;
+using System.Collections;
 
 public class CircularPointSpawner : MonoBehaviour
 {
+    public Animator wormAnimator;
     public GameObject[] objectPrefabs;
     public int numberOfObjects = 10;
     public float radius = 5f;
@@ -15,7 +18,7 @@ public class CircularPointSpawner : MonoBehaviour
     public GameObject player;
     public float speedIncreaseInterval = 10f;
     public float speedIncreaseAmount = 0.5f;
-    private float timeSinceLastSpeedIncrease = 0f;
+    private float TimeSinceLastSpeedIncrease = 0f;
 
     private void Start()
     {
@@ -73,6 +76,7 @@ public class CircularPointSpawner : MonoBehaviour
             // Check for intersection with player collider
             if (objTransform.GetComponent<Collider>().bounds.Intersects(player.GetComponent<Collider>().bounds))
             {
+                wormAnimator.SetTrigger("Chomp");
                 Debug.Log("Object collided with player!");
                 Destroy(objTransform.gameObject);
                 yield break;
@@ -85,11 +89,11 @@ public class CircularPointSpawner : MonoBehaviour
             }
 
             // Increase speed of objects over time
-            timeSinceLastSpeedIncrease += Time.deltaTime;
-            if (timeSinceLastSpeedIncrease > speedIncreaseInterval)
+            TimeSinceLastSpeedIncrease += Time.deltaTime;
+            if (TimeSinceLastSpeedIncrease > speedIncreaseInterval)
             {
                 speed += speedIncreaseAmount;
-                timeSinceLastSpeedIncrease = 0f;
+                TimeSinceLastSpeedIncrease = 0f;
             }
 
             yield return null;
