@@ -1,9 +1,9 @@
 {
-    "m_SelectedDeviceId": "adb-R3CT401ETNE-Lr5G84._adb-tls-connect._tcp.",
+    "m_SelectedDeviceId": "R3CT401ETNE",
     "m_SelectedPackage": {
-        "deviceId": "adb-R3CT401ETNE-Lr5G84._adb-tls-connect._tcp.",
+        "deviceId": "R3CT401ETNE",
         "name": "com.TeamOne.BNBKoffieTuinApp",
-        "processId": 32578,
+        "processId": 22129,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -54,6 +54,54 @@
             "deviceId": "R3CT401ETNE",
             "name": "com.TeamOne.BNBKoffieTuinApp",
             "processId": 5264,
+            "exited": false
+        },
+        {
+            "deviceId": "R3CT401ETNE",
+            "name": "com.TeamOne.BNBKoffieTuinApp",
+            "processId": 11245,
+            "exited": false
+        },
+        {
+            "deviceId": "R3CT401ETNE",
+            "name": "com.TeamOne.BNBKoffieTuinApp",
+            "processId": 14559,
+            "exited": false
+        },
+        {
+            "deviceId": "R3CT401ETNE",
+            "name": "com.TeamOne.BNBKoffieTuinApp",
+            "processId": 20291,
+            "exited": false
+        },
+        {
+            "deviceId": "R3CT401ETNE",
+            "name": "com.TeamOne.BNBKoffieTuinApp",
+            "processId": 14989,
+            "exited": false
+        },
+        {
+            "deviceId": "R3CT401ETNE",
+            "name": "com.TeamOne.BNBKoffieTuinApp",
+            "processId": 6127,
+            "exited": false
+        },
+        {
+            "deviceId": "R3CT401ETNE",
+            "name": "com.TeamOne.BNBKoffieTuinApp",
+            "processId": 10014,
+            "exited": false
+        },
+        {
+            "deviceId": "R3CT401ETNE",
+            "name": "com.TeamOne.BNBKoffieTuinApp",
+            "processId": 11626,
+            "exited": false
+        },
+        {
+            "deviceId": "R3CT401ETNE",
+            "name": "com.TeamOne.BNBKoffieTuinApp",
+            "processId": 22129,
             "exited": false
         },
         {
