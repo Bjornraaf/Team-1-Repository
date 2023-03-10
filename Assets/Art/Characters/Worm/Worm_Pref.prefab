@@ -48,8 +48,8 @@ MonoBehaviour:
   m_Data:
     m_ConstrainedObject: {fileID: 3967144749428719556}
     m_Source: {fileID: 5442650632351033998}
-    m_DampPosition: 0.2
-    m_DampRotation: 0.2
+    m_DampPosition: 0.4
+    m_DampRotation: 0.4
     m_MaintainAim: 1
 --- !u!1 &676454408639258940
 GameObject:
@@ -99,8 +99,8 @@ MonoBehaviour:
   m_Data:
     m_ConstrainedObject: {fileID: 1268542407179122879}
     m_Source: {fileID: 8866900782597231347}
-    m_DampPosition: 0.2
-    m_DampRotation: 0.2
+    m_DampPosition: 0.4
+    m_DampRotation: 0.4
     m_MaintainAim: 1
 --- !u!1 &1168891676254585524
 GameObject:
@@ -249,8 +249,8 @@ MonoBehaviour:
   m_Data:
     m_ConstrainedObject: {fileID: 3278539693764131528}
     m_Source: {fileID: 7569329490764816223}
-    m_DampPosition: 0.2
-    m_DampRotation: 0.2
+    m_DampPosition: 0.4
+    m_DampRotation: 0.4
     m_MaintainAim: 1
 --- !u!1 &4567873840493508894
 GameObject:
@@ -300,8 +300,8 @@ MonoBehaviour:
   m_Data:
     m_ConstrainedObject: {fileID: 8866900782597231347}
     m_Source: {fileID: 152743327568536789}
-    m_DampPosition: 0.2
-    m_DampRotation: 0.2
+    m_DampPosition: 0.4
+    m_DampRotation: 0.4
     m_MaintainAim: 1
 --- !u!1 &5515756806210033533
 GameObject:
@@ -351,8 +351,8 @@ MonoBehaviour:
   m_Data:
     m_ConstrainedObject: {fileID: 7569329490764816223}
     m_Source: {fileID: 1268542407179122879}
-    m_DampPosition: 0.2
-    m_DampRotation: 0.2
+    m_DampPosition: 0.4
+    m_DampRotation: 0.4
     m_MaintainAim: 1
 --- !u!1 &5906215057392873501
 GameObject:
@@ -402,8 +402,8 @@ MonoBehaviour:
   m_Data:
     m_ConstrainedObject: {fileID: 152743327568536789}
     m_Source: {fileID: 3186111651374554221}
-    m_DampPosition: 0.2
-    m_DampRotation: 0.2
+    m_DampPosition: 0.4
+    m_DampRotation: 0.4
     m_MaintainAim: 1
 --- !u!1 &6975800290585383247
 GameObject:
@@ -453,8 +453,8 @@ MonoBehaviour:
   m_Data:
     m_ConstrainedObject: {fileID: 5442650632351033998}
     m_Source: {fileID: 3278539693764131528}
-    m_DampPosition: 0.2
-    m_DampRotation: 0.2
+    m_DampPosition: 0.4
+    m_DampRotation: 0.4
     m_MaintainAim: 1
 --- !u!1001 &3278058597173169975
 PrefabInstance:
