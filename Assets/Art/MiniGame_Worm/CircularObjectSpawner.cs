@@ -3,7 +3,8 @@ using System.Collections;
 
 public class CircularObjectSpawner : MonoBehaviour
 {
-public GameObject objectPrefab;
+    public HealthScript healthScript;
+public GameObject[] objectPrefabs;
 public int numberOfObjects = 10;
 public float radius = 5f;
 public float speed = 1f;
@@ -45,13 +46,13 @@ private void SpawnObject()
     Vector3 position = new Vector3(Mathf.Cos(angle) * radius, 0f, Mathf.Sin(angle) * radius);
 
     // Calculate the rotation of the object based on its position on the circle
-    Quaternion rotation = Quaternion.LookRotation(transform.position - position);
-
+    Quaternion rotation = Quaternion.Euler(0f, 0f, Random.Range(0f, 360f)) * Quaternion.LookRotation(transform.position - position);
+    
     // Randomize the scale of the object
     float randomScale = Random.Range(minScale, maxScale);
 
     // Instantiate the object and set its position, rotation, and scale
-    GameObject obj = Instantiate(objectPrefab, position, rotation);
+    GameObject obj = Instantiate(objectPrefabs[Random.Range(0, objectPrefabs.Length)], position, rotation);
     obj.transform.localScale = new Vector3(randomScale, randomScale, randomScale);
     obj.transform.parent = transform;
 
@@ -74,7 +75,12 @@ private IEnumerator MoveObject(Transform objTransform, Vector3 direction, float 
         if (objTransform.GetComponent<Collider>().bounds.Intersects(player.GetComponent<Collider>().bounds))
         {
             Debug.Log("Object collided with player!");
-            EndGame();
+            Destroy(objTransform.gameObject);
+            healthScript.healthAmount = healthScript.healthAmount - 1;
+            if(healthScript.healthAmount == 0)
+            {
+                EndGame();
+            }
             yield break;
         }
 
@@ -103,7 +109,7 @@ private void EndGame()
 {
     // End the game by stopping object spawning and resetting the scene
     CancelInvoke();
-    UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
+    //go back to map/main menu
 }
 
 

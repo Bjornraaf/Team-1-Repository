@@ -2,9 +2,11 @@
 using System.Collections;
 using UnityEngine;
 using System.Collections;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class CircularPointSpawner : MonoBehaviour
 {
+    public ScoreScript scoreScript;
     public Animator wormAnimator;
     public GameObject[] objectPrefabs;
     public int numberOfObjects = 10;
@@ -48,8 +50,8 @@ public class CircularPointSpawner : MonoBehaviour
         Vector3 position = new Vector3(Mathf.Cos(angle) * radius, 0f, Mathf.Sin(angle) * radius);
 
         // Calculate the rotation of the object based on its position on the circle
-        Quaternion rotation = Quaternion.LookRotation(transform.position - position);
-
+        Quaternion rotation = Quaternion.Euler(0f, 0f, Random.Range(0f, 360f)) * Quaternion.LookRotation(transform.position - position);
+        
         // Randomize the scale of the object
         float randomScale = Random.Range(minScale, maxScale);
 
@@ -77,6 +79,7 @@ public class CircularPointSpawner : MonoBehaviour
             if (objTransform.GetComponent<Collider>().bounds.Intersects(player.GetComponent<Collider>().bounds))
             {
                 wormAnimator.SetTrigger("Chomp");
+                scoreScript.gameScore = scoreScript.gameScore + 5;
                 Debug.Log("Object collided with player!");
                 Destroy(objTransform.gameObject);
                 yield break;
