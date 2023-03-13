@@ -6,8 +6,17 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/ExampleAssets/Scenes/SampleScene.unity
-    guid: 9fc0d4010bbf28b4594072e72b8655ab
+    path: Assets/Scenes/WormMG.unity
+    guid: 9ed32230bf1ab6f4f9d1dfbeaea3c226
+  - enabled: 0
+    path: Assets/Scenes/MapGPS/GPS.unity
+    guid: e510fae2813d4564084241ac75b06dd9
+  - enabled: 0
+    path: Assets/Scenes/ShootingGame.unity
+    guid: 239848afbd6ce634c8e9b097485862be
+  - enabled: 0
+    path: Assets/Scenes/BlankAR.unity
+    guid: 6bdce89659816455b9f906fc62d19910
   m_configObjects:
     Unity.XR.WindowsMR.Settings: {fileID: 11400000, guid: 744b813df90924c169af73489b8325de,
       type: 2}
