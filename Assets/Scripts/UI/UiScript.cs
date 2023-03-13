@@ -11,9 +11,10 @@ using UnityEngine;
 ///----------------------------------------$$ |      $$ |  $$ |$$ |      \$$$$$$  /
 ///----------------------------------------\__|      \__|  \__|\__|       \______/ 
 
-public class PauseScript : MonoBehaviour
+public class UiScript : MonoBehaviour
 {
     private bool isPaused = false;
+    public LevelLoader levelLoader;
 
     void Update()
     {

@@ -3,7 +3,7 @@
     "m_SelectedPackage": {
         "deviceId": "R3CT401ETNE",
         "name": "com.TeamOne.BNBKoffieTuinApp",
-        "processId": 19813,
+        "processId": 8044,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -108,6 +108,12 @@
             "deviceId": "R3CT401ETNE",
             "name": "com.TeamOne.BNBKoffieTuinApp",
             "processId": 19813,
+            "exited": false
+        },
+        {
+            "deviceId": "R3CT401ETNE",
+            "name": "com.TeamOne.BNBKoffieTuinApp",
+            "processId": 8044,
             "exited": false
         },
         {

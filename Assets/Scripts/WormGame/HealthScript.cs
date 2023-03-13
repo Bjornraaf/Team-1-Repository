@@ -16,6 +16,8 @@ public class HealthScript : MonoBehaviour
 {
     public int healthAmount = 3;
     public GameObject[] playerHearts;
+    public GameObject endScreen;
+    public EndScore endScore;
     
     void Update()
     {
@@ -32,7 +34,9 @@ public class HealthScript : MonoBehaviour
         if (healthAmount == 0)
         {
             playerHearts[0].SetActive(false);
-            Debug.Log("player is dead");
+            Time.timeScale = 0f;
+            endScreen.SetActive(true);
+            endScore.endGame();
         }
     }
 }
