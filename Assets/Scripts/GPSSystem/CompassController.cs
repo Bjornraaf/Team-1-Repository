@@ -25,7 +25,7 @@ public class CompassController : MonoBehaviour
     [Tooltip("The amount of noise filtering for the smoothed compass")]
     public float filterFactor = 0.05f;
     [Tooltip("The direction text that displays the heading(N, W, E,S)")]
-    public Text directionText;
+    //public Text directionText;
 
     private float RawHeading; // Raw compass heading value.
     private string DirectionString = ""; // String that changes depending on the compass direction.
@@ -34,6 +34,7 @@ public class CompassController : MonoBehaviour
     {
         Input.compass.enabled = true;
         Input.location.Start();
+
     }
 
     void Update()
@@ -73,12 +74,13 @@ public class CompassController : MonoBehaviour
             }
             
             // Update the UI element to display the compass.
-            directionText.text = "Direction: " + DirectionString;
+            //directionText.text = "Direction: " + DirectionString;
 
             // Log the heading and direction to the console.
             Debug.Log("Compass Heading: " + compassHeading.ToString("F2") + " degrees ");
             Debug.Log((RawHeading));
             Debug.Log(DirectionString);
+            gameObject.transform.rotation = Quaternion.Euler(-90, compassHeading, 0);
         }
     }
 }

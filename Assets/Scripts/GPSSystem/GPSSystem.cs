@@ -12,7 +12,8 @@ public class GPSSystem : MonoBehaviour
     [SerializeField] private float Scale;
     [Header("Test Location")]
     [SerializeField] private bool isFakingLocation;
-
+    [SerializeField] private Text FailedText;
+    [SerializeField] private Text PositionText;
     private void Start()
     {
         Input.location.Start( 5, 10);
@@ -28,7 +29,7 @@ public class GPSSystem : MonoBehaviour
         {
             if (Input.location.isEnabledByUser == false)
             {
-                GameObject.Find("FailedText").GetComponent<Text>().text = "Failed because Location was not enabled.";
+                FailedText.text = "Failed because Location was not enabled.";
             }
 
             int maxWait = 20;
@@ -41,12 +42,12 @@ public class GPSSystem : MonoBehaviour
 
             if (maxWait < 1)
             {
-                GameObject.Find("FailedText").GetComponent<Text>().text = "Initializing failed, try again.";
+                FailedText.text = "Initializing failed, try again.";
                 yield return null;
             }
             if (Input.location.status == LocationServiceStatus.Failed)
             {
-                GameObject.Find("FailedText").GetComponent<Text>().text = "Location service status failed";
+                FailedText.text = "Location service status failed";
                 yield return null;
             }
             else
@@ -75,7 +76,7 @@ public class GPSSystem : MonoBehaviour
         Vector2 delta = new Vector2(RealCurrentPostion.x - RealInit.x, RealCurrentPostion.y - RealInit.y);
         FakeCurrentPostion = delta * Scale;
         transform.position = new Vector3(FakeCurrentPostion.x, 0, FakeCurrentPostion.y);
-        GameObject.Find("PositionText").GetComponent<Text>().text = transform.position.x + " : " + transform.position.y + " : " + transform.position.z;
+        PositionText.text = transform.position.x + " : " + transform.position.y + " : " + transform.position.z;
     }
     private void Update()
     {
