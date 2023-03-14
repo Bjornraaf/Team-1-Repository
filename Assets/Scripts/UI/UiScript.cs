@@ -14,8 +14,6 @@ using UnityEngine;
 public class UiScript : MonoBehaviour
 {
     private bool isPaused = false;
-    public LevelLoader levelLoader;
-
     void Update()
     {
         if (isPaused)

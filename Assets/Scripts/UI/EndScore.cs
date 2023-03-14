@@ -20,7 +20,6 @@ public class EndScore : MonoBehaviour
     public int endScore = 0; // Int of the end score that is shown in the game over screen.
     public ScoreScript scoreScript; // The score script.
     public GameObject[] uiElements; // The Ui elements that are turned off after the game ends.
-    public GameObject levelLoader;
 
     public void endGame()
     {
@@ -29,6 +28,6 @@ public class EndScore : MonoBehaviour
         {
             uiElement.SetActive(false);
         }
-        endScoreText.text = "Eindscore: " + endScore;
+        endScoreText.text = "" + endScore;
     }
 }
