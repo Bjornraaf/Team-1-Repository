@@ -1,9 +1,9 @@
 {
-    "m_SelectedDeviceId": "255450a9",
+    "m_SelectedDeviceId": "R3CT401ETNE",
     "m_SelectedPackage": {
-        "deviceId": "255450a9",
+        "deviceId": "R3CT401ETNE",
         "name": "com.TeamOne.BNBKoffieTuinApp",
-        "processId": 32364,
+        "processId": 8044,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -57,6 +57,66 @@
             "exited": false
         },
         {
+            "deviceId": "R3CT401ETNE",
+            "name": "com.TeamOne.BNBKoffieTuinApp",
+            "processId": 11245,
+            "exited": false
+        },
+        {
+            "deviceId": "R3CT401ETNE",
+            "name": "com.TeamOne.BNBKoffieTuinApp",
+            "processId": 14559,
+            "exited": false
+        },
+        {
+            "deviceId": "R3CT401ETNE",
+            "name": "com.TeamOne.BNBKoffieTuinApp",
+            "processId": 20291,
+            "exited": false
+        },
+        {
+            "deviceId": "R3CT401ETNE",
+            "name": "com.TeamOne.BNBKoffieTuinApp",
+            "processId": 14989,
+            "exited": false
+        },
+        {
+            "deviceId": "R3CT401ETNE",
+            "name": "com.TeamOne.BNBKoffieTuinApp",
+            "processId": 6127,
+            "exited": false
+        },
+        {
+            "deviceId": "R3CT401ETNE",
+            "name": "com.TeamOne.BNBKoffieTuinApp",
+            "processId": 10014,
+            "exited": false
+        },
+        {
+            "deviceId": "R3CT401ETNE",
+            "name": "com.TeamOne.BNBKoffieTuinApp",
+            "processId": 11626,
+            "exited": false
+        },
+        {
+            "deviceId": "R3CT401ETNE",
+            "name": "com.TeamOne.BNBKoffieTuinApp",
+            "processId": 22129,
+            "exited": false
+        },
+        {
+            "deviceId": "R3CT401ETNE",
+            "name": "com.TeamOne.BNBKoffieTuinApp",
+            "processId": 19813,
+            "exited": false
+        },
+        {
+            "deviceId": "R3CT401ETNE",
+            "name": "com.TeamOne.BNBKoffieTuinApp",
+            "processId": 8044,
+            "exited": false
+        },
+        {
             "deviceId": "255450a9",
             "name": "com.google.android.permissioncontroller",
             "processId": 23979,
@@ -66,186 +126,6 @@
             "deviceId": "255450a9",
             "name": "com.TeamOne.BNBKoffieTuinApp",
             "processId": 19824,
-            "exited": false
-        },
-        {
-            "deviceId": "255450a9",
-            "name": "com.TeamOne.BNBKoffieTuinApp",
-            "processId": 5658,
-            "exited": false
-        },
-        {
-            "deviceId": "255450a9",
-            "name": "com.TeamOne.BNBKoffieTuinApp",
-            "processId": 5661,
-            "exited": false
-        },
-        {
-            "deviceId": "255450a9",
-            "name": "com.TeamOne.BNBKoffieTuinApp",
-            "processId": 5659,
-            "exited": false
-        },
-        {
-            "deviceId": "255450a9",
-            "name": "com.TeamOne.BNBKoffieTuinApp",
-            "processId": 5660,
-            "exited": false
-        },
-        {
-            "deviceId": "255450a9",
-            "name": "com.TeamOne.BNBKoffieTuinApp",
-            "processId": 5067,
-            "exited": false
-        },
-        {
-            "deviceId": "255450a9",
-            "name": "com.TeamOne.BNBKoffieTuinApp",
-            "processId": 5065,
-            "exited": false
-        },
-        {
-            "deviceId": "255450a9",
-            "name": "com.TeamOne.BNBKoffieTuinApp",
-            "processId": 5066,
-            "exited": false
-        },
-        {
-            "deviceId": "255450a9",
-            "name": "com.TeamOne.BNBKoffieTuinApp",
-            "processId": 5068,
-            "exited": false
-        },
-        {
-            "deviceId": "255450a9",
-            "name": "com.TeamOne.BNBKoffieTuinApp",
-            "processId": 24972,
-            "exited": false
-        },
-        {
-            "deviceId": "255450a9",
-            "name": "com.TeamOne.BNBKoffieTuinApp",
-            "processId": 24973,
-            "exited": false
-        },
-        {
-            "deviceId": "255450a9",
-            "name": "com.TeamOne.BNBKoffieTuinApp",
-            "processId": 24974,
-            "exited": false
-        },
-        {
-            "deviceId": "255450a9",
-            "name": "com.TeamOne.BNBKoffieTuinApp",
-            "processId": 24975,
-            "exited": false
-        },
-        {
-            "deviceId": "255450a9",
-            "name": "com.TeamOne.BNBKoffieTuinApp",
-            "processId": 24976,
-            "exited": false
-        },
-        {
-            "deviceId": "255450a9",
-            "name": "com.TeamOne.BNBKoffieTuinApp",
-            "processId": 5841,
-            "exited": false
-        },
-        {
-            "deviceId": "255450a9",
-            "name": "com.TeamOne.BNBKoffieTuinApp",
-            "processId": 5842,
-            "exited": false
-        },
-        {
-            "deviceId": "255450a9",
-            "name": "com.TeamOne.BNBKoffieTuinApp",
-            "processId": 5843,
-            "exited": false
-        },
-        {
-            "deviceId": "255450a9",
-            "name": "com.TeamOne.BNBKoffieTuinApp",
-            "processId": 5839,
-            "exited": false
-        },
-        {
-            "deviceId": "255450a9",
-            "name": "com.TeamOne.BNBKoffieTuinApp",
-            "processId": 14382,
-            "exited": false
-        },
-        {
-            "deviceId": "255450a9",
-            "name": "com.TeamOne.BNBKoffieTuinApp",
-            "processId": 14384,
-            "exited": false
-        },
-        {
-            "deviceId": "255450a9",
-            "name": "com.TeamOne.BNBKoffieTuinApp",
-            "processId": 14383,
-            "exited": false
-        },
-        {
-            "deviceId": "255450a9",
-            "name": "com.TeamOne.BNBKoffieTuinApp",
-            "processId": 21243,
-            "exited": false
-        },
-        {
-            "deviceId": "255450a9",
-            "name": "com.TeamOne.BNBKoffieTuinApp",
-            "processId": 7270,
-            "exited": false
-        },
-        {
-            "deviceId": "255450a9",
-            "name": "com.TeamOne.BNBKoffieTuinApp",
-            "processId": 15156,
-            "exited": false
-        },
-        {
-            "deviceId": "255450a9",
-            "name": "com.TeamOne.BNBKoffieTuinApp",
-            "processId": 15157,
-            "exited": false
-        },
-        {
-            "deviceId": "255450a9",
-            "name": "com.TeamOne.BNBKoffieTuinApp",
-            "processId": 25262,
-            "exited": false
-        },
-        {
-            "deviceId": "255450a9",
-            "name": "com.TeamOne.BNBKoffieTuinApp",
-            "processId": 25264,
-            "exited": false
-        },
-        {
-            "deviceId": "255450a9",
-            "name": "com.TeamOne.BNBKoffieTuinApp",
-            "processId": 7629,
-            "exited": false
-        },
-        {
-            "deviceId": "255450a9",
-            "name": "com.TeamOne.BNBKoffieTuinApp",
-            "processId": 7627,
-            "exited": false
-        },
-        {
-            "deviceId": "255450a9",
-            "name": "com.TeamOne.BNBKoffieTuinApp",
-            "processId": 22397,
-            "exited": false
-        },
-        {
-            "deviceId": "255450a9",
-            "name": "com.TeamOne.BNBKoffieTuinApp",
-            "processId": 32364,
             "exited": false
         },
         {
