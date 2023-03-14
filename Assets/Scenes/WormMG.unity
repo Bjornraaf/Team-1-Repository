@@ -273,12 +273,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthAmount: 3
+  endScreen: {fileID: 1014699732}
+  endScoreScript: {fileID: 46267569}
   playerHearts:
   - {fileID: 1661818291}
   - {fileID: 274930218}
   - {fileID: 499812750}
-  endScreen: {fileID: 1014699732}
-  endScore: {fileID: 46267569}
 --- !u!114 &46267569
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -288,18 +288,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 46267561}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 791b03f442f27ee41a7d2ab6990b7f39, type: 3}
+  m_Script: {fileID: 11500000, guid: e545eff248d7f2f4cb6fa312e8eb5d53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   endScoreText: {fileID: 282437383}
-  endScore: 0
   scoreScript: {fileID: 46267567}
   uiElements:
   - {fileID: 458738107}
   - {fileID: 1811139150}
   - {fileID: 1440483087}
   - {fileID: 522466988}
-  levelLoader: {fileID: 1518330363}
 --- !u!95 &113669604 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 6940860810715962955, guid: 4baf9dd990fbe174494f4e72760a5cd0,
@@ -2292,19 +2290,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7fc446ef981b64a4d8cb76f016b31e92, type: 3}
---- !u!1 &1518330363 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 30601089207557282, guid: 7fc446ef981b64a4d8cb76f016b31e92,
-    type: 3}
-  m_PrefabInstance: {fileID: 1518330362}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1518330364 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6044597195999085765, guid: 7fc446ef981b64a4d8cb76f016b31e92,
     type: 3}
   m_PrefabInstance: {fileID: 1518330362}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1518330363}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 87ebec4d6443bbf4c84e7193224dc41a, type: 3}
