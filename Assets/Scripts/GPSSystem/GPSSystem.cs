@@ -7,7 +7,6 @@ public class GPSSystem : MonoBehaviour
     private Vector2 RealInit;
     private Vector2 RealCurrentPostion;
     private Vector2 FakeCurrentPostion;
-    //[SerializeField] private SaveMapLocation tets;
 
     [Header("Scaling")]
     [SerializeField] private float Scale;
@@ -19,8 +18,6 @@ public class GPSSystem : MonoBehaviour
     {
         Input.location.Start( 5, 10);
         Input.compass.enabled = true;
-        //RealCurrentPostion = tets.MyLastLocation;
-        //transform.position = tets.MyLastUnityLocation;
     }
     /// <summary>
     /// Holds all the failsafes for the game and the Fakelocation game tester.
@@ -76,11 +73,9 @@ public class GPSSystem : MonoBehaviour
     void SetLocation(float latitude, float longitude)
     {
         RealCurrentPostion = new Vector2(latitude, longitude);
-        //tets.MyLastLocation = RealCurrentPostion;
         Vector2 delta = new Vector2(RealCurrentPostion.x - RealInit.x, RealCurrentPostion.y - RealInit.y);
         FakeCurrentPostion = delta * Scale;
         transform.position = new Vector3(FakeCurrentPostion.x, 0, FakeCurrentPostion.y);
-        //tets.MyLastUnityLocation = transform.position;
         PositionText.text = transform.position.x + " : " + transform.position.y + " : " + transform.position.z;
     }
     private void Update()
