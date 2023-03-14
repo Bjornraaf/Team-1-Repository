@@ -22,6 +22,6 @@ public class ScoreScript : MonoBehaviour
     
     void Update()
     {
-        scoreText.text = "Score " + gameScore;
+        scoreText.text = "Score: " + gameScore;
     }
 }
