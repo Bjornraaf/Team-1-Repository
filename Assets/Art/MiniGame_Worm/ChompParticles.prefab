@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4305869160784843318}
   - component: {fileID: 7180472418007629399}
   m_Layer: 0
-  m_Name: ChompParticels
+  m_Name: ChompParticles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
