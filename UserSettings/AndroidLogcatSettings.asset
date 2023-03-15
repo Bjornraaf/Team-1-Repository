@@ -3,7 +3,7 @@
     "m_SelectedPackage": {
         "deviceId": "255450a9",
         "name": "com.TeamOne.BNBKoffieTuinApp",
-        "processId": 12260,
+        "processId": 27107,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -132,6 +132,18 @@
             "deviceId": "255450a9",
             "name": "com.TeamOne.BNBKoffieTuinApp",
             "processId": 12260,
+            "exited": false
+        },
+        {
+            "deviceId": "255450a9",
+            "name": "com.TeamOne.BNBKoffieTuinApp",
+            "processId": 10734,
+            "exited": false
+        },
+        {
+            "deviceId": "255450a9",
+            "name": "com.TeamOne.BNBKoffieTuinApp",
+            "processId": 27107,
             "exited": false
         },
         {
