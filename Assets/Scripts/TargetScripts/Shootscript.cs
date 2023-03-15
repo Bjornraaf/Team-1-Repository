@@ -36,9 +36,9 @@ public class Shootscript : MonoBehaviour
                 //Adds score.
                 Score += 1;
                 //Shows the score in the upper right corner.
-                GameObject.Find("Score").GetComponent<Text>().text = Score.ToString() + " Points";
+                GameObject.Find("Score").GetComponent<Text>().text = "Score: " + Score.ToString();
                 //Shows the text at the end of the game.
-                EndScoreText.text = Score.ToString() + " Points"; 
+                EndScoreText.text = Score.ToString(); 
             }
         }
     }

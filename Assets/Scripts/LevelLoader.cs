@@ -13,16 +13,13 @@ public class LevelLoader : MonoBehaviour
     /// <summary>
     /// Starts the Scene Transition and Loads the next Scene;
     /// </summary>
-
     public void LoadNextLevel()
     {
         StartCoroutine(LoadLevel(loadSceneWithName));
-        Debug.Log("loading scene");
     }
-    
+
     IEnumerator LoadLevel(string name)
     {
-        Debug.Log("ienumarator used");
         Transition.SetTrigger("Start");
         yield return new WaitForSeconds(TransitionTime);
         SceneManager.LoadScene(name);

@@ -42,6 +42,7 @@ public class SpawnTargetScript : MonoBehaviour
     {
         yield return new WaitForSeconds(40);
         EndScreen.SetActive(true);
+        GameObject.Find("Shoot_UI").SetActive(false);
     }
 
 }
