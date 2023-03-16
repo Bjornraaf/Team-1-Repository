@@ -7,6 +7,7 @@ public class CircularPointSpawner : MonoBehaviour
     public ScoreScript scoreScript;
     public Animator wormAnimator;
     public GameObject[] objectPrefabs;
+    public GameObject particleSystemPrefab;
     public int numberOfObjects = 10;
     public float radius = 5f;
     public float speed = 1f;
@@ -77,9 +78,12 @@ public class CircularPointSpawner : MonoBehaviour
             if (objTransform.GetComponent<Collider>().bounds.Intersects(player.GetComponent<Collider>().bounds))
             {
                 wormAnimator.SetTrigger("Chomp");
+                GameObject particles = Instantiate(particleSystemPrefab, player.transform.position, Quaternion.identity);
+                particles.transform.parent = transform;
                 scoreScript.gameScore = scoreScript.gameScore + 5;
                 Debug.Log("Object collided with player!");
                 Destroy(objTransform.gameObject);
+                Destroy(particles, 2f);
                 yield break;
             }
 
