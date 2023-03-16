@@ -70,7 +70,7 @@ public class CollisionCheck : MonoBehaviour
     {
         if ( GrowScore1 >= 2 && GrowScore2 >= 2 && GrowScore3 >= 2)
         {
-            Debug.Log("hi");
+         
         }
     }
 }
