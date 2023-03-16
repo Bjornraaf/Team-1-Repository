@@ -24,7 +24,7 @@ public class CollisionCheck : MonoBehaviour
     IEnumerator ScoreCount3()
     {
         yield return new WaitForSeconds(1);
-        GrowScore2 += 1;
+        GrowScore3 += 1;
         StartCoroutine(ScoreCount3());
     }
 
@@ -50,6 +50,16 @@ public class CollisionCheck : MonoBehaviour
     private void OnTriggerExit(Collider other)
     {
         if (other.gameObject.name.Equals("flower"))
+        {
+            StopAllCoroutines();
+        }
+
+        if (other.gameObject.name.Equals("flower1"))
+        {
+            StopAllCoroutines();
+        }
+
+        if (other.gameObject.name.Equals("flower2"))
         {
             StopAllCoroutines();
         }
