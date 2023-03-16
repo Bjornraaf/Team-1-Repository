@@ -10,7 +10,7 @@ Geef per teammember aan welke game onderdelen je hebt geproduceerd. Doe dit met 
 Maak ook een overzicht van alle onderdelen met een link naar de map waarin deze terug te vinden zijn.
 
 Bjorn Ravensbergen:
-  * GPS System[GPS System](https://github.com/Bjornraaf/Team-1-Repository/tree/develop/Assets/Scripts/GPSSystem)
+  * [GPS System](https://github.com/Bjornraaf/Team-1-Repository/tree/develop/Assets/Scripts/GPSSystem)
 
 Patryk Podworny:
   * blank
