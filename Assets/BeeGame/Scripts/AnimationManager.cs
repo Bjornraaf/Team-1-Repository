@@ -6,7 +6,20 @@ public class AnimationManager : MonoBehaviour
 {
     public Animator animator;
 
-    void Start()
+    IEnumerator playShortly()
+    {
+        animator.enabled = true;
+        yield return new WaitForSeconds (1);
+        animator.enabled = false;
+    }
+
+    private void Start()
+    {
+        animator.enabled = false;
+        StartCoroutine(playShortly());
+    }
+
+    void Update()
     {
         animator = GetComponent<Animator>();
     }
@@ -15,7 +28,7 @@ public class AnimationManager : MonoBehaviour
     {
         if (other.gameObject.tag.Equals("Beam"))
         {
-            animator.speed = 1;
+            animator.enabled = true;
         }
     }
 
@@ -23,7 +36,7 @@ public class AnimationManager : MonoBehaviour
     {
         if (other.gameObject.tag.Equals("Beam"))
         {
-           animator.speed = 1;
+           animator.enabled = false;
 
         }
     }
