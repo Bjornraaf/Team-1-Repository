@@ -21,7 +21,7 @@ Ties Postma:
   * blank
 
 ## GPS System
-![GPS Image](../Images/GPSSystem.jpg)
+![GPS Image](https://github.com/Bjornraaf/Team-1-Repository/blob/develop/Images/GPSSystem.jpg)
 ```mermaid
 flowchart TD
     Start((Start)) -->|Get Location| QuestionYes/No(Yes/No)
