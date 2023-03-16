@@ -1,9 +1,9 @@
 {
-    "m_SelectedDeviceId": "R3CT401ETNE",
+    "m_SelectedDeviceId": "255450a9",
     "m_SelectedPackage": {
-        "deviceId": "R3CT401ETNE",
+        "deviceId": "255450a9",
         "name": "com.TeamOne.BNBKoffieTuinApp",
-        "processId": 8044,
+        "processId": 10889,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -126,6 +126,42 @@
             "deviceId": "255450a9",
             "name": "com.TeamOne.BNBKoffieTuinApp",
             "processId": 19824,
+            "exited": false
+        },
+        {
+            "deviceId": "255450a9",
+            "name": "com.TeamOne.BNBKoffieTuinApp",
+            "processId": 12260,
+            "exited": false
+        },
+        {
+            "deviceId": "255450a9",
+            "name": "com.TeamOne.BNBKoffieTuinApp",
+            "processId": 10734,
+            "exited": false
+        },
+        {
+            "deviceId": "255450a9",
+            "name": "com.TeamOne.BNBKoffieTuinApp",
+            "processId": 27107,
+            "exited": false
+        },
+        {
+            "deviceId": "255450a9",
+            "name": "com.TeamOne.BNBKoffieTuinApp",
+            "processId": 12642,
+            "exited": false
+        },
+        {
+            "deviceId": "255450a9",
+            "name": "com.TeamOne.BNBKoffieTuinApp",
+            "processId": 12641,
+            "exited": false
+        },
+        {
+            "deviceId": "255450a9",
+            "name": "com.TeamOne.BNBKoffieTuinApp",
+            "processId": 10889,
             "exited": false
         },
         {

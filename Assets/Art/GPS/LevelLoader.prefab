@@ -116,7 +116,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Transition: {fileID: 792621663572972400}
   TransitionTime: 1
-  loadSceneWithName: 
+  loadSceneWithName: GPS
 --- !u!1 &792621663369216061
 GameObject:
   m_ObjectHideFlags: 0
