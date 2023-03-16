@@ -14,5 +14,6 @@ public class Waypoint : MonoBehaviour
     {
         Loader.loadSceneWithName = NewSceneName;
         Loader.LoadNextLevel();
+        Destroy(gameObject);
     }
 }

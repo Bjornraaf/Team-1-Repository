@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,27 +13,23 @@ using UnityEngine.UI;
 ///----------------------------------------$$ |      $$ |  $$ |$$ |      \$$$$$$  /
 ///----------------------------------------\__|      \__|  \__|\__|       \______/ 
 
-public class HealthScript : MonoBehaviour
+/// <summary>  
+/// Class that contains the player score and changes the UI text depending on the score.
+/// </summary>
+
+public class ScoreScript : MonoBehaviour
 {
-    public int healthAmount = 3;
-    public GameObject[] playerHearts;
-    
+    #region Variables
+    [Tooltip("The text that displays the score")]
+    public Text scoreText; //String that changes depending on the score.
+    [Tooltip("The int that is the score")]
+    public int gameScore = 0; //Int that changes depending on the score.
+    #endregion
+
+    #region Unity Events
     void Update()
     {
-        if (healthAmount == 2)
-        {
-            playerHearts[2].SetActive(false);
-        }
-        
-        if (healthAmount == 1)
-        {
-            playerHearts[1].SetActive(false);
-        }
-
-        if (healthAmount == 0)
-        {
-            playerHearts[0].SetActive(false);
-            Debug.Log("player is dead");
-        }
+        scoreText.text = "Score: " + gameScore; //Changes the UI text combining a string and the gameScore int.
     }
+    #endregion
 }

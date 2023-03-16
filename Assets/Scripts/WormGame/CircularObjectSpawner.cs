@@ -1,14 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
-using UnityEngine;
-using System.Collections;
-using UnityEngine.SocialPlatforms.Impl;
 
-public class CircularPointSpawner : MonoBehaviour
+public class CircularObjectSpawner : MonoBehaviour
 {
-    public ScoreScript scoreScript;
-    public Animator wormAnimator;
+    public HealthScript healthScript;
     public GameObject[] objectPrefabs;
+    public GameObject particleSystemPrefab;
+    public Animator wormAnimator;
     public int numberOfObjects = 10;
     public float radius = 5f;
     public float speed = 1f;
@@ -20,7 +18,7 @@ public class CircularPointSpawner : MonoBehaviour
     public GameObject player;
     public float speedIncreaseInterval = 10f;
     public float speedIncreaseAmount = 0.5f;
-    private float TimeSinceLastSpeedIncrease = 0f;
+    private float timeSinceLastSpeedIncrease = 0f;
 
     private void Start()
     {
@@ -51,11 +49,11 @@ public class CircularPointSpawner : MonoBehaviour
 
         // Calculate the rotation of the object based on its position on the circle
         Quaternion rotation = Quaternion.Euler(0f, 0f, Random.Range(0f, 360f)) * Quaternion.LookRotation(transform.position - position);
-        
+
         // Randomize the scale of the object
         float randomScale = Random.Range(minScale, maxScale);
 
-        // Instantiate a random object prefab and set its position, rotation, and scale
+        // Instantiate the object and set its position, rotation, and scale
         GameObject obj = Instantiate(objectPrefabs[Random.Range(0, objectPrefabs.Length)], position, rotation);
         obj.transform.localScale = new Vector3(randomScale, randomScale, randomScale);
         obj.transform.parent = transform;
@@ -76,12 +74,15 @@ public class CircularPointSpawner : MonoBehaviour
             elapsedTime += Time.deltaTime;
 
             // Check for intersection with player collider
-            if (objTransform.GetComponent<Collider>().bounds.Intersects(player.GetComponent<Collider>().bounds))
+            if (objTransform.GetChild(0).GetComponent<MeshCollider>().bounds.Intersects(player.GetComponent<Collider>().bounds))
             {
-                wormAnimator.SetTrigger("Chomp");
-                scoreScript.gameScore = scoreScript.gameScore + 5;
                 Debug.Log("Object collided with player!");
+                wormAnimator.SetTrigger("Collide");
+                GameObject particles = Instantiate(particleSystemPrefab, player.transform.position, Quaternion.identity);
+                particles.transform.parent = transform;
                 Destroy(objTransform.gameObject);
+                healthScript.healthAmount = healthScript.healthAmount - 1;
+                Destroy(particles, 2f);
                 yield break;
             }
 
@@ -92,11 +93,11 @@ public class CircularPointSpawner : MonoBehaviour
             }
 
             // Increase speed of objects over time
-            TimeSinceLastSpeedIncrease += Time.deltaTime;
-            if (TimeSinceLastSpeedIncrease > speedIncreaseInterval)
+            timeSinceLastSpeedIncrease += Time.deltaTime;
+            if (timeSinceLastSpeedIncrease > speedIncreaseInterval)
             {
                 speed += speedIncreaseAmount;
-                TimeSinceLastSpeedIncrease = 0f;
+                timeSinceLastSpeedIncrease = 0f;
             }
 
             yield return null;
@@ -105,4 +106,11 @@ public class CircularPointSpawner : MonoBehaviour
         objTransform.position = targetPosition;
         Destroy(objTransform.gameObject);
     }
+
+    private void EndGame()
+    {
+        CancelInvoke();
+        //go back to map/main menu
+    }
+
 }

@@ -17,11 +17,11 @@ public class LevelLoader : MonoBehaviour
     {
         StartCoroutine(LoadLevel(loadSceneWithName));
     }
+
     IEnumerator LoadLevel(string name)
     {
         Transition.SetTrigger("Start");
         yield return new WaitForSeconds(TransitionTime);
         SceneManager.LoadScene(name);
-
     }
 }
