@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Drawing;
@@ -6,8 +7,8 @@ using UnityEngine.UI;
 
 public class RaycastForBee : MonoBehaviour
 {
-    [SerializeField] private GameObject ARCamera;
     [SerializeField] private GameObject Bee;
+    [SerializeField] private GameObject Flower;
 
 
     void Update ()
@@ -15,11 +16,11 @@ public class RaycastForBee : MonoBehaviour
         RaycastHit BeerayHit;
 
         //Checks if the raycast hits the wall.
-        if (Physics.Raycast(ARCamera.transform.position, ARCamera.transform.forward, out BeerayHit))
+        if (Physics.Raycast(Bee.transform.position, Bee.transform.forward, out BeerayHit))
         {
-            if (BeerayHit.transform.tag == "Wall")
+            if (BeerayHit.transform.tag == "Flower")
             {
-                Bee.transform.position = BeerayHit.transform.position;
+                Debug.Log("hitted flower");
             }
         }
     }
