@@ -1,10 +1,8 @@
 # Team-1-Repository
 
-In deze repository vind je de informatie over het examen project.
-
-Omschrijf de examenopdracht evt de klant en wat het doel voor de klant is.
-Omschrijf ook beknopt wat het idee van je game is. 
-Een complete en uitgebreide beschrijving komt in het functioneel ontwerp (onderdeel van de [wiki](https://github.com/Bjornraaf/Team-1-Repository/wiki))
+Het doel van dit project is het creëren van meerdere Augmented Reality (AR) games voor Android-gebruikers. Het spel moet gebruikmaken van de AR-functionaliteit op mobiele apparaten, moet worden ontwikkeld in Unity & maakt gebruik van GPS voor User Location. Kinderen voltooien hierin uitdagingen op verschillende locaties tijdens een wandeling om cijfers te verdienen voor een cijferslot. De uitdagingen worden weergegeven op een kaart met pictogrammen en de behaalde cijfers worden zichtbaar op het scherm. Om het slot te openen zijn minstens twee verschillende uitdagingen vereist. Herhaling van uitdagingen is mogelijk om alle cijfers te verkrijgen.
+<br>  
+Een complete en uitgebreide beschrijving is [hier](https://github.com/Bjornraaf/Team-1-Repository/wiki) te vinden.
 
 # Geproduceerde Game Onderdelen
 
@@ -12,8 +10,7 @@ Geef per teammember aan welke game onderdelen je hebt geproduceerd. Doe dit met 
 Maak ook een overzicht van alle onderdelen met een link naar de map waarin deze terug te vinden zijn.
 
 Bjorn Ravensbergen:
-  * blank
-  * blank
+  * [GPS System](https://github.com/Bjornraaf/Team-1-Repository/tree/develop/Assets/Scripts/GPSSystem)
 
 Patryk Podworny:
   * blank
@@ -23,6 +20,19 @@ Ties Postma:
   * blank
   * blank
 
-## VoorbeeldText
-
-Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line.
+## GPS System
+![GPS Image](https://github.com/Bjornraaf/Team-1-Repository/blob/develop/Images/GPSSystem.jpg)
+```mermaid
+flowchart TD
+    Start((Start)) -->|Get Location| QuestionYes/No(Yes/No)
+    QuestionYes/No -->|Yes| FakingLocation[Faking Location?]
+    FakingLocation -->|Yes| FakeLocation[Get Fake Location]
+    FakingLocation -->|No| RealLocation[Get Initial GPS Location]
+    RealLocation -->|SetLocation| UnityLocation[UnityLocation]
+    FakeLocation -->|SetTestingLocation| UnityTestingLocation[UnityTestingLocation]
+    QuestionYes/No -->|No| No[Try again]
+    No -->|Location Not Enabled| Failed[Failed]
+    No -->|Try for 20 seconds| QuestionYes/No
+    No ---->|After 20 seconds| Failed[Failed]
+```
+GPS System wordt gebruikt om de locatie van een speler te bepalen en weer te geven in Unity. Het script bevat variabelen zoals ```RealInit```, ```RealCurrentPosition``` en ```FakeCurrentPosition``` om de locatie van de speler op te slaan. Ook zijn er failsafes en methoden zoals ```UpdatePosition()``` en ```SetLocation()``` om de locatiegegevens bij te werken en te bepalen. Er zijn ook variabelen om het testen van de app te ondersteunen en te rapporteren over de locatiegegevens.
