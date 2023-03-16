@@ -21,4 +21,18 @@ Ties Postma:
   * blank
 
 ## GPS System
+![GPS Image](images/GPSSystem.jpg)
+```mermaid
+flowchart TD
+    Start((Start)) -->|Get Location| QuestionYes/No(Yes/No)
+    QuestionYes/No -->|Yes| FakingLocation[Faking Location?]
+    FakingLocation -->|Yes| FakeLocation[Get Fake Location]
+    FakingLocation -->|No| RealLocation[Get Initial GPS Location]
+    RealLocation -->|SetLocation| UnityLocation[UnityLocation]
+    FakeLocation -->|SetTestingLocation| UnityTestingLocation[UnityTestingLocation]
+    QuestionYes/No -->|No| No[Try again]
+    No -->|Location Not Enabled| Failed[Failed]
+    No -->|Try for 20 seconds| QuestionYes/No
+    No ---->|After 20 seconds| Failed[Failed]
+```
 GPS System wordt gebruikt om de locatie van een speler te bepalen en weer te geven in Unity. Het script bevat variabelen zoals ```RealInit```, ```RealCurrentPosition``` en ```FakeCurrentPosition``` om de locatie van de speler op te slaan. Ook zijn er failsafes en methoden zoals ```UpdatePosition()``` en ```SetLocation()``` om de locatiegegevens bij te werken en te bepalen. Er zijn ook variabelen om het testen van de app te ondersteunen en te rapporteren over de locatiegegevens.
