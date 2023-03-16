@@ -1,6 +1,6 @@
 # Team-1-Repository
 
-Kinderen voltooien uitdagingen op verschillende locaties tijdens een wandeling om cijfers te verdienen voor een cijferslot. De uitdagingen worden weergegeven op een kaart met pictogrammen en de behaalde cijfers worden zichtbaar op het scherm. Om het slot te openen zijn minstens twee verschillende uitdagingen vereist. Herhaling van uitdagingen is mogelijk om alle cijfers te verkrijgen.
+Het doel van dit project is het creëren van meerdere Augmented Reality (AR) games voor Android-gebruikers. Het spel moet gebruikmaken van de AR-functionaliteit op mobiele apparaten, moet worden ontwikkeld in Unity & maakt gebruik van GPS voor User Location. Kinderen voltooien hierin uitdagingen op verschillende locaties tijdens een wandeling om cijfers te verdienen voor een cijferslot. De uitdagingen worden weergegeven op een kaart met pictogrammen en de behaalde cijfers worden zichtbaar op het scherm. Om het slot te openen zijn minstens twee verschillende uitdagingen vereist. Herhaling van uitdagingen is mogelijk om alle cijfers te verkrijgen.
 <br>  
 Een complete en uitgebreide beschrijving is [hier](https://github.com/Bjornraaf/Team-1-Repository/wiki) te vinden.
 
