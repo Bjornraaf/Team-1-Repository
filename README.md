@@ -1,6 +1,6 @@
 # Team-1-Repository
 
-Kinderen voltooien uitdagingen op verschillende locaties tijdens een wandeling om cijfers te verdienen voor een cijferslot. De uitdagingen worden weergegeven op een kaart met pictogrammen en de behaalde cijfers worden zichtbaar op het scherm. Om het slot te openen zijn minstens twee verschillende uitdagingen vereist. Herhaling van uitdagingen is mogelijk om alle cijfers te verkrijgen.
+Het doel van dit project is het creëren van meerdere Augmented Reality (AR) games voor Android-gebruikers. Het spel moet gebruikmaken van de AR-functionaliteit op mobiele apparaten, moet worden ontwikkeld in Unity & maakt gebruik van GPS voor User Location. Kinderen voltooien hierin uitdagingen op verschillende locaties tijdens een wandeling om cijfers te verdienen voor een cijferslot. De uitdagingen worden weergegeven op een kaart met pictogrammen en de behaalde cijfers worden zichtbaar op het scherm. Om het slot te openen zijn minstens twee verschillende uitdagingen vereist. Herhaling van uitdagingen is mogelijk om alle cijfers te verkrijgen.
 <br>  
 Een complete en uitgebreide beschrijving is [hier](https://github.com/Bjornraaf/Team-1-Repository/wiki) te vinden.
 
@@ -10,7 +10,7 @@ Geef per teammember aan welke game onderdelen je hebt geproduceerd. Doe dit met 
 Maak ook een overzicht van alle onderdelen met een link naar de map waarin deze terug te vinden zijn.
 
 Bjorn Ravensbergen:
-  * GPS System
+  * [GPS System](https://github.com/Bjornraaf/Team-1-Repository/tree/develop/Assets/Scripts/GPSSystem)
 
 Patryk Podworny:
   * blank
@@ -21,17 +21,18 @@ Ties Postma:
   * blank
 
 ## GPS System
-
-De variabelen ```RealInit```, ```RealCurrentPosition``` en ```FakeCurrentPosition``` zijn allemaal Vector2 variabelen die de locatie van de speler op verschillende manieren opslaan. ```RealInit``` slaat de initiële GPS-coördinaten op van waar de speler zich bevond toen de app werd gestart. ```RealCurrentPosition``` slaat de huidige GPS-coördinaten van de speler op en ```FakeCurrentPosition``` bevat de coördinaten die gebruikt worden om de positie van de speler in de virtuele omgeving te bepalen.
-
-De ```Scale``` variabele wordt gebruikt om de afstand tussen de werkelijke locatie van de speler en de locatie in de virtuele omgeving te verkleinen of vergroten.
-
-Er zijn ook variabelen zoals ```isFakingLocation```, ```FailedText``` en ```PositionText``` die dienen om het testen van de app te ondersteunen en te rapporteren over de locatiegegevens.
-
-In de ```Start()``` methode wordt de GPS-functionaliteit van het apparaat geactiveerd en wordt het kompas geactiveerd.
-
-De ```UpdatePosition()``` methode bevat failsafes die ervoor zorgen dat de locatiegegevens correct worden weergegeven. Als de app de GPS-locatie van het apparaat gebruikt, controleert de methode of GPS is ingeschakeld en of de locatie wordt geïnitialiseerd. Als er geen locatie is, of als de initialisatie mislukt, wordt de juiste tekst in het ```FailedText``` object weergegeven. Als de GPS-locatie correct is geïnitialiseerd, wordt de huidige locatie van de speler bepaald en bijgehouden. Als ```isFakingLocation``` ```true``` is, worden de locatiegegevens nep gemaakt voor het testen.
-
-De ```SetLocation()``` methode wordt gebruikt om de positie van de speler in de virtuele omgeving te bepalen. De GPS-coördinaten van de speler worden omgezet in Vector2 objecten, en vervolgens wordt de ```FakeCurrentPosition``` bepaald aan de hand van de initiële locatie en de huidige locatie van de speler, met behulp van de ```Scale``` variabele. Tot slot wordt de ```transform.position``` van het ```GameObject``` waarop het script is bevestigd, ingesteld op de virtuele locatie van de speler.
-
-In de ```Update()``` methode wordt de ```UpdatePosition()``` methode opgeroepen om de locatiegegevens te actualiseren.
+![GPS Image](https://github.com/Bjornraaf/Team-1-Repository/blob/develop/Images/GPSSystem.jpg)
+```mermaid
+flowchart TD
+    Start((Start)) -->|Get Location| QuestionYes/No(Yes/No)
+    QuestionYes/No -->|Yes| FakingLocation[Faking Location?]
+    FakingLocation -->|Yes| FakeLocation[Get Fake Location]
+    FakingLocation -->|No| RealLocation[Get Initial GPS Location]
+    RealLocation -->|SetLocation| UnityLocation[UnityLocation]
+    FakeLocation -->|SetTestingLocation| UnityTestingLocation[UnityTestingLocation]
+    QuestionYes/No -->|No| No[Try again]
+    No -->|Location Not Enabled| Failed[Failed]
+    No -->|Try for 20 seconds| QuestionYes/No
+    No ---->|After 20 seconds| Failed[Failed]
+```
+GPS System wordt gebruikt om de locatie van een speler te bepalen en weer te geven in Unity. Het script bevat variabelen zoals ```RealInit```, ```RealCurrentPosition``` en ```FakeCurrentPosition``` om de locatie van de speler op te slaan. Ook zijn er failsafes en methoden zoals ```UpdatePosition()``` en ```SetLocation()``` om de locatiegegevens bij te werken en te bepalen. Er zijn ook variabelen om het testen van de app te ondersteunen en te rapporteren over de locatiegegevens.
