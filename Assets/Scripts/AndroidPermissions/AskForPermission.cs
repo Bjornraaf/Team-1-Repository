@@ -16,11 +16,11 @@ public class AskForPermission : MonoBehaviour
 {
     void Start()
     {
-        if(!Permission.HasUserAuthorizedPermission(Permission.Camera))
-            Permission.RequestUserPermission(Permission.Camera);
-        if(!Permission.HasUserAuthorizedPermission(Permission.CoarseLocation))
-            Permission.RequestUserPermission(Permission.CoarseLocation);
-        if(!Permission.HasUserAuthorizedPermission(Permission.FineLocation))
+        if (!Permission.HasUserAuthorizedPermission(Permission.FineLocation))
             Permission.RequestUserPermission(Permission.FineLocation);
+        if (!Permission.HasUserAuthorizedPermission(Permission.CoarseLocation))
+            Permission.RequestUserPermission(Permission.CoarseLocation);
+        if (!Permission.HasUserAuthorizedPermission(Permission.Camera))
+            Permission.RequestUserPermission(Permission.Camera);
     }
 }
