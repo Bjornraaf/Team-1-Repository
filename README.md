@@ -13,8 +13,8 @@ Bjorn Ravensbergen:
   * [GPS System](https://github.com/Bjornraaf/Team-1-Repository/tree/develop/Assets/Scripts/GPSSystem)
 
 Patryk Podworny:
-  * blank
-  * blank
+  * [Compass](https://github.com/Bjornraaf/Team-1-Repository/blob/develop/Assets/Scripts/GPSSystem/CompassController.cs)
+  * [Worm Game](https://github.com/Bjornraaf/Team-1-Repository/tree/develop/Assets/Scripts/WormGame)
 
 Ties Postma:
   * blank
