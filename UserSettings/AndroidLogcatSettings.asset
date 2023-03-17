@@ -2,8 +2,8 @@
     "m_SelectedDeviceId": "255450a9",
     "m_SelectedPackage": {
         "deviceId": "255450a9",
-        "name": "com.TeamOne.BNBKoffieTuinApp",
-        "processId": 10889,
+        "name": "com.teamone.bosbeesjes",
+        "processId": 7827,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -162,6 +162,30 @@
             "deviceId": "255450a9",
             "name": "com.TeamOne.BNBKoffieTuinApp",
             "processId": 10889,
+            "exited": false
+        },
+        {
+            "deviceId": "255450a9",
+            "name": "com.teamone.bosbeesjes",
+            "processId": 28984,
+            "exited": false
+        },
+        {
+            "deviceId": "255450a9",
+            "name": "com.teamone.bosbeesjes",
+            "processId": 28982,
+            "exited": false
+        },
+        {
+            "deviceId": "255450a9",
+            "name": "com.teamone.bosbeesjes",
+            "processId": 7823,
+            "exited": false
+        },
+        {
+            "deviceId": "255450a9",
+            "name": "com.teamone.bosbeesjes",
+            "processId": 7827,
             "exited": false
         },
         {
