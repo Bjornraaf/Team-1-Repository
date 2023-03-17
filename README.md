@@ -49,7 +49,7 @@ flowchart TD;
         Smooth[Smooth compass heading]
         Determine[Determine compass direction]
         Snap[Snap heading to 0 or 360]
-        Update[Update UI element and log heading/direction]
+        UpdateUI[Update UI element and log heading/direction]
         Rotation[Set game object rotation]
         End[End]
 
@@ -61,7 +61,7 @@ flowchart TD;
         Smooth --> Determine
         Determine --> Snap
         Snap --> Update
-        Update --> Rotation
+        UpdateUI --> Rotation
         Rotation --> End
         ifEnabled -- No --> End
 ```
