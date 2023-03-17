@@ -60,7 +60,7 @@ flowchart TD;
         ifEnabled -- Yes --> Smooth
         Smooth --> Determine
         Determine --> Snap
-        Snap --> Update
+        Snap --> UpdateUI
         UpdateUI --> Rotation
         Rotation --> End
         ifEnabled -- No --> End
