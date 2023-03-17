@@ -13,7 +13,7 @@ using UnityEngine.UI;
 ///----------------------------------------$$ |      $$ |  $$ |$$ |      \$$$$$$  /
 ///----------------------------------------\__|      \__|  \__|\__|       \______/ 
 
-public class EndScore : MonoBehaviour
+public class EndScoreScript : MonoBehaviour
 {
     [Tooltip("The text that displays the end score")]
     public Text endScoreText; // String that changes depending on the score.
