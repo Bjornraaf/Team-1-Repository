@@ -7,6 +7,7 @@ public class CollisionCheck : MonoBehaviour
     [SerializeField] private int GrowScore1 = 0;
     [SerializeField] private int GrowScore2 = 0;
     [SerializeField] private int GrowScore3 = 0;
+    [SerializeField] private GameObject EndUI;
     IEnumerator ScoreCount1()
     {
         yield return new WaitForSeconds(1);
@@ -70,7 +71,7 @@ public class CollisionCheck : MonoBehaviour
     {
         if ( GrowScore1 >= 2 && GrowScore2 >= 2 && GrowScore3 >= 2)
         {
-         
+            EndUI.SetActive(true);
         }
     }
 }
