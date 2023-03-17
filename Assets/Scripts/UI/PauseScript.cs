@@ -11,7 +11,7 @@ using UnityEngine;
 ///----------------------------------------$$ |      $$ |  $$ |$$ |      \$$$$$$  /
 ///----------------------------------------\__|      \__|  \__|\__|       \______/ 
 
-public class UiScript : MonoBehaviour
+public class PauseScript : MonoBehaviour
 {
     private bool isPaused = false;
     void Update()
