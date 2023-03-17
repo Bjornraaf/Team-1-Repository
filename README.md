@@ -40,16 +40,30 @@ GPS System wordt gebruikt om de locatie van een speler te bepalen en weer te gev
 ## Compass
 ![Compass Image](https://github.com/Bjornraaf/Team-1-Repository/blob/develop/Images/Compass.png)
 ```mermaid
-graph TD;
-    A[Start] --> B[Enable compass and location];
-    B --> C[Assign RawHeading to true heading];
-    C[Update] --> D[If compass is enabled];
-    D --> E[Smooth compass heading];
-    E --> F[Determine compass direction];
-    F --> G[Snap heading to 0 or 360];
-    G --> H[Update UI element and log heading/direction];
-    H --> I[Set game object rotation];
-    I --> J[End];
+flowchart LR;
+    subgraph Unity C# Script
+        Start[Start]
+        Enable[Enable compass and location]
+        RawHeading[Assign RawHeading to true heading]
+        ifEnabled[If compass is enabled]
+        Smooth[Smooth compass heading]
+        Determine[Determine compass direction]
+        Snap[Snap heading to 0 or 360]
+        Update[Update UI element and log heading/direction]
+        Rotation[Set game object rotation]
+        End[End]
+
+        Start --> Enable
+        Enable --> RawHeading
+        RawHeading --> ifEnabled
+        ifEnabled -- Yes --> Smooth
+        Smooth --> Determine
+        Determine --> Snap
+        Snap --> Update
+        Update --> Rotation
+        Rotation --> End
+        ifEnabled -- No --> End
+    end
 ```
 De compass wordt gebruikt om de rotatie van een speler te bepalen zodat het UI element weergeeft welke kant de speler op kijkt in Unity. Het script bevat variabelen zoals.
 GPS System wordt gebruikt om de locatie van een speler te bepalen en weer te geven in Unity. Het script bevat variabelen zoals ```RealInit```, ```RealCurrentPosition``` en ```FakeCurrentPosition``` om de locatie van de speler op te slaan. Ook zijn er failsafes en methoden zoals ```UpdatePosition()``` en ```SetLocation()``` om de locatiegegevens bij te werken en te bepalen. Er zijn ook variabelen om het testen van de app te ondersteunen en te rapporteren over de locatiegegevens.
