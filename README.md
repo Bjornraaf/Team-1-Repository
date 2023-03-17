@@ -17,8 +17,8 @@ Patryk Podworny:
   * [Worm Game](https://github.com/Bjornraaf/Team-1-Repository/tree/develop/Assets/Scripts/WormGame) & [UI](https://github.com/Bjornraaf/Team-1-Repository/tree/develop/Assets/Scripts/UI)
 
 Ties Postma:
-  * blank
-  * blank
+  * [Helicopter game](https://github.com/Bjornraaf/Team-1-Repository/tree/develop/Assets/Scripts/TargetScripts)
+  * [Bee game](https://github.com/Bjornraaf/Team-1-Repository/tree/develop/Assets/BeeGame/Scripts)
 
 ## GPS System
 ![GPS Image](https://github.com/Bjornraaf/Team-1-Repository/blob/develop/Images/GPSSystem.jpg)
