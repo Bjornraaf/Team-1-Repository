@@ -62,7 +62,6 @@ flowchart TD;
         Update --> Rotation
         Rotation --> End
         ifEnabled -- No --> End
-    end
 ```
 De compass wordt gebruikt om de rotatie van een speler te bepalen zodat het UI element weergeeft welke kant de speler op kijkt in Unity. Het script bevat variabelen zoals.
 GPS System wordt gebruikt om de locatie van een speler te bepalen en weer te geven in Unity. Het script bevat variabelen zoals ```RealInit```, ```RealCurrentPosition``` en ```FakeCurrentPosition``` om de locatie van de speler op te slaan. Ook zijn er failsafes en methoden zoals ```UpdatePosition()``` en ```SetLocation()``` om de locatiegegevens bij te werken en te bepalen. Er zijn ook variabelen om het testen van de app te ondersteunen en te rapporteren over de locatiegegevens.
