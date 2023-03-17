@@ -44,6 +44,7 @@ flowchart TD;
         Start((Start))
         Enable[Enable compass and location]
         RawHeading[Assign RawHeading to true heading]
+        Update((Update))
         ifEnabled[If compass is enabled]
         Smooth[Smooth compass heading]
         Determine[Determine compass direction]
@@ -53,7 +54,8 @@ flowchart TD;
         End[End]
 
         Start --> Enable
-        Enable --> RawHeading
+        Enable --> Update
+        Update --> RawHeading
         RawHeading --> ifEnabled
         ifEnabled -- Yes --> Smooth
         Smooth --> Determine
