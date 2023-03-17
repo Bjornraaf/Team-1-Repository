@@ -9,10 +9,13 @@ EditorBuildSettings:
     path: Assets/Scenes/MapGPS/GPS.unity
     guid: 6affd657134df534688f163f84680a5d
   - enabled: 1
-    path: Assets/Scenes/ShootingGame.unity
+    path: Assets/Scenes/HelicopterGame.unity
     guid: 239848afbd6ce634c8e9b097485862be
   - enabled: 1
-    path: Assets/Scenes/WormMG.unity
+    path: Assets/Scenes/BeeGame.unity
+    guid: fbdd4cf14775bb74880e9795aa5e77a3
+  - enabled: 1
+    path: Assets/Scenes/WormGame.unity
     guid: 9ed32230bf1ab6f4f9d1dfbeaea3c226
   m_configObjects:
     Unity.XR.WindowsMR.Settings: {fileID: 11400000, guid: 744b813df90924c169af73489b8325de,
