@@ -40,8 +40,7 @@ GPS System wordt gebruikt om de locatie van een speler te bepalen en weer te gev
 ## Compass
 ![Compass Image](https://github.com/Bjornraaf/Team-1-Repository/blob/develop/Images/Compass.png)
 ```mermaid
-flowchart LR;
-    subgraph Unity C# Script
+flowchart TD;
         Start[Start]
         Enable[Enable compass and location]
         RawHeading[Assign RawHeading to true heading]
