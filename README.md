@@ -43,7 +43,7 @@ GPS System wordt gebruikt om de locatie van een speler te bepalen en weer te gev
 graph TD;
     A[Start] --> B[Enable compass and location];
     B --> C[Assign RawHeading to true heading];
-    C --> D[If compass is enabled];
+    C[Update] --> D[If compass is enabled];
     D --> E[Smooth compass heading];
     E --> F[Determine compass direction];
     F --> G[Snap heading to 0 or 360];
