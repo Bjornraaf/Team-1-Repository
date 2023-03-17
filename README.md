@@ -38,7 +38,7 @@ flowchart TD
 GPS System wordt gebruikt om de locatie van een speler te bepalen en weer te geven in Unity. Het script bevat variabelen zoals ```RealInit```, ```RealCurrentPosition``` en ```FakeCurrentPosition``` om de locatie van de speler op te slaan. Ook zijn er failsafes en methoden zoals ```UpdatePosition()``` en ```SetLocation()``` om de locatiegegevens bij te werken en te bepalen. Er zijn ook variabelen om het testen van de app te ondersteunen en te rapporteren over de locatiegegevens.
 
 ## Compass
-![Compass Image](https://github.com/Bjornraaf/Team-1-Repository/blob/develop/Images/Compass.jpg)
+![Compass Image](https://github.com/Bjornraaf/Team-1-Repository/blob/develop/Images/Compass.png)
 ```mermaid
 graph TD;
     A[Start] --> B[Enable compass and location];
